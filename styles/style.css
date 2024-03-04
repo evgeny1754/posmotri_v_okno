@@ -9,11 +9,14 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  padding: 0 30px 0 30px;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +38,247 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.result__video-container {
+  position: relative;
+  margin-block-end: 16px;
+  width: 711px;
+  height: 386px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.search-form__label {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: none;
+  outline-offset: 2px;
+}
+
+.search-form__label:hover > .search-form__label-text {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.search-form__textfield {
+  outline: none;
+  background: none;
+  border-top: 1px solid #fff;
+  border-right: none;
+  border-bottom: 1px solid #fff;
+  border-left: none;
+  appearance: none;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  width: 224px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  content: "";
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-top: 6px;
+  width: 100%;
+  height: 100%;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: relative;
+  gap: 30px;
+  height: 302px;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link_current {
+  background: #545050;
+}
+
+.content__card-link:active {
+  background: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline 1px;
+}
+
+.content__card-link:focus-visible {
+  padding: 2px;
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding-left: 1px;
+  gap: 6px;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 70.5px;
+  text-transform: uppercase;
+  max-width: 260px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__video-card-title {
+  text-transform: uppercase;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16.2px;
+  max-width: 100%;
+  height: 100%;
+  letter-spacing: -0.01em;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  color: #fff;
+  background: none;
+  height: 33px;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: 1px solid #fff;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button {
+  max-width: 193px;
+  align-self: flex-end;
+}
+
+.more-button {
+  width: 100%;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.button:focus-visible {
+  outline-offset: 2px;
+}
+
+.button:focus-visible,
+.content__list-item:focus-visible,
+.search-form__pseudo-checkbox,
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
